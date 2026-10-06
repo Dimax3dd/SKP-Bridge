@@ -1,5 +1,7 @@
 # SKP Bridge
 
+<img width="463" height="696" alt="Screenshot_26" src="https://github.com/user-attachments/assets/3ff5c762-87c0-497e-b9d0-1a912153ee36" />
+
 **SketchUp `.skp` importer for Blender 5.2+ on Windows x64.**
 
 SKP Bridge is an enhanced Blender importer based on the open-source SketchUp importer by Martijn Berger, Sanjay Mehta and Arindam Mondal. It is designed for architectural visualization workflows where imported SketchUp geometry needs to be cleaned, merged and prepared for Blender.
