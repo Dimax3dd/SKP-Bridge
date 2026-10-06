@@ -1,0 +1,26 @@
+SKP Bridge — Third-Party Notices
+
+SKP Bridge contains and/or uses third-party software components.
+
+1. Original SketchUp importer
+   Project: pyslapi / sketchup_importer
+   Copyright: Martijn Berger, Sanjay Mehta, Arindam Mondal and contributors
+   Source: https://github.com/martijnberger/sketchup_importer
+   License: GPL-compatible terms as provided by the original project.
+   This project has been adapted for SKP Bridge.
+
+2. SketchUp native SDK components
+   Files in the Windows release package include native SketchUp SDK components supplied separately from the Python importer, including:
+     - SketchUpAPI.dll
+     - SketchUpCommonPreferences.dll
+     - sketchup.cp311-win_amd64.pyd
+   Reported SDK version: 21.1.279.
+   These binaries are third-party components and are not relicensed by SKP Bridge.
+   Their applicable copyright and license terms remain in force.
+
+3. Python runtime
+   The Windows release package contains a bundled CPython 3.11 runtime.
+   Python runtime files remain under their respective Python licenses.
+   See runtime/LICENSE.txt in the release package.
+
+SKP Bridge itself does not grant additional rights to third-party components beyond any rights provided by their original licenses.
