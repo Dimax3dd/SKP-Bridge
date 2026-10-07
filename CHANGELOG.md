@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.12
+
+- Geometry Processing options now work independently of Merge Objects.
+- Convert Triangles to Quads, Limited Dissolve by Material, Cube Project UV, Pivot: Center at Base, Apply Rotation & Scale and Auto Smooth can be applied directly after import without merging.
+- Preserved linked SketchUp component instances when post-processing shared mesh data.
+- Apply Rotation & Scale avoids breaking linked instances with incompatible instance transforms.
+- Removed the redundant helper text from the Geometry Processing section.
+
 ## 1.0.8
 
 - Fixed recursive SketchUp tag/layer inheritance for nested groups and components.
