@@ -21,6 +21,8 @@ SKP Bridge is an enhanced Blender importer based on the open-source SketchUp imp
 - Apply Rotation & Scale
 - Auto Smooth
 - Recursive SketchUp tag/layer inheritance
+- Geometry Processing works independently of Merge Objects
+- Linked SketchUp component instances remain linked during compatible post-processing
 - Cleanup of temporary imported mesh datablocks
 
 ## Requirements
@@ -33,7 +35,7 @@ The current native reader reports **SketchUp SDK 21.1.279**. SKP format compatib
 
 ## Installation
 
-1. Download the latest `SKP_Bridge-1.0.8-Windows-x64.zip` from **GitHub Releases**.
+1. Download the latest Windows x64 release package from **GitHub Releases**.
 2. In Blender open **Edit → Preferences → Add-ons → Install from Disk**.
 3. Select the downloaded ZIP.
 4. Enable **SKP Bridge**.
@@ -45,7 +47,7 @@ The current native reader reports **SketchUp SDK 21.1.279**. SKP format compatib
 
 Open the importer from **File → Import → SKP Bridge — SketchUp (.skp)**.
 
-The processing options are intentionally aimed at architectural visualization workflows. You can import normally or enable merging and geometry cleanup in the same import operation.
+The processing options are aimed at architectural visualization workflows. You can import normally, enable merging, or use the geometry cleanup options independently of Merge Objects.
 
 ### Merge modes
 
@@ -54,6 +56,19 @@ The processing options are intentionally aimed at architectural visualization wo
 - **By Layers** — combine geometry according to the effective SketchUp tag/layer.
 
 For nested SketchUp groups/components, an object on `Layer0` inherits the parent tag when it has no explicit tag. An explicit nested tag overrides the inherited tag.
+
+### Geometry Processing
+
+The following options can be enabled with **Merge Objects OFF** and are applied directly after import:
+
+- **Convert Triangles to Quads**
+- **Limited Dissolve by Material**
+- **Cube Project UV**
+- **Pivot: Center at Base**
+- **Apply Rotation & Scale**
+- **Auto Smooth**
+
+Shared component meshes remain linked whenever the selected processing can be applied without conflicting instance transforms.
 
 ## Project structure
 
@@ -65,7 +80,7 @@ addon/SKP_Bridge/
 └── SKPutil/
 ```
 
-The `release` ZIP additionally contains the Windows x64 native reader and bundled Python runtime required for the current build.
+The release ZIP additionally contains the Windows x64 native reader and bundled Python runtime required for the current build.
 
 ## Credits
 
@@ -90,6 +105,6 @@ The third-party SDK binaries are distributed as part of the Windows release buil
 
 ## Status
 
-**Version 1.0.8 — stable.**
+**Version 1.0.12 — stable.**
 
 This release focuses on reliable SketchUp import and post-import preparation for Blender architectural visualization workflows.
